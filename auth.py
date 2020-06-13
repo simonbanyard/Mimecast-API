@@ -33,5 +33,5 @@ def authentication(uri):
 
 
 if __name__ == '__main__':
-    uri = input("Enter URI: ")
-    print(f"Authorization: {authentication(uri)}")
+    endpoint = input("Enter URI: ")
+    print(f"Authorization: {authentication(endpoint)}")
