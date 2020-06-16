@@ -13,7 +13,7 @@ base_url = "https://xx-api.mimecast.com"
 access_key = "Access Key"
 secret_key = "Secret Key"
 app_id = "Application ID"
-app_key = "Application key"
+app_key = "Application Key"
 
 # Generate UUID based on RFC4122 and Date/Time based on RFC1123/2822
 request_id = str(uuid.uuid4())
