@@ -11,13 +11,10 @@ import requests
 base_url = "https://eu-api.mimecast.com"
 uri = "/api/account/get-account"
 url = base_url + uri
-access_key = ("mYtOL3XZCOwG96BOiFTZRuiS6gUCSg9ltXQQBuw9DU3YxzDQWq5_ptA9jdlBBO"
-              "_TWIoSXDTu_Bn1HRu1neJ9GlsYiwjTY3hzCus8chW82AhF1Pptw4F8wbrPZCHJO"
-              "QbZJIvmxpg0JaSiG8faa60wHg")
-secret_key = ("hikaj5QQMkBc+KLc7veuoXortne0SiPB5kCffSeWaStOqYx"
-              "+zJQJspVJKDumaEQsVx4d1+6hiIWEi1Bh5LzHKw== ")
-app_id = "4ea70b79-69f5-4af1-a5b7-bc02db01e665"
-app_key = "e05ae721-d485-4b28-8b32-293c1cc242a0"
+access_key = "xxx"
+secret_key = "xxx"
+app_id = "xxx"
+app_key = "xxx"
 
 # Generate request header values
 request_id = str(uuid.uuid4())
