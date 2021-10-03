@@ -1,8 +1,9 @@
 import base64
 import hashlib
 import hmac
-import time
 import uuid
+from datetime import datetime
+from dateutil.tz import tzlocal
 
 # Setup account details
 # base_url: Replace xx with the region the account is hosted in, see
@@ -17,11 +18,9 @@ app_key = "Application Key"
 
 # Generate UUID based on RFC4122 and Date/Time based on RFC1123/2822
 request_id = str(uuid.uuid4())
-hdr_date = time.strftime("%a, %d %b %Y %H:%M:%S +0000", time.gmtime())
+hdr_date = datetime.now(tzlocal()).strftime("%a, %d %b %Y %H:%M:%S %Z")
 
 
-# Create Authorization Signature - see
-# https://www.mimecast.com/tech-connect/documentation/api-overview/authorization/
 def authentication(uri):
     data_to_sign = f"{hdr_date}:{request_id}:{uri}:{app_key}"
     hmac_sha1 = hmac.new(base64.b64decode(secret_key),
